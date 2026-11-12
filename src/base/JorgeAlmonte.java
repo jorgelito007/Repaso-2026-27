@@ -1,22 +1,25 @@
 package base;
 
 public class JorgeAlmonte {
-
+ 
+	public static void mostrarMensaje(String texto) {
+	    System.out.println(texto);
+	}
+	
     public static void main(String[] args) {
 
         int librosDisponibles = 10;
 
-        System.out.println("Libros iniciales: " + librosDisponibles);
-
+        mostrarMensaje("Libros iniciales: " + librosDisponibles);
         librosDisponibles = actualizarLibros(librosDisponibles, -4);
-        System.out.println("Préstamo realizado.");
+        mostrarMensaje("Préstamo realizado.");
 
         librosDisponibles = actualizarLibros(librosDisponibles, 2);
-        System.out.println("Devolución realizada.");
+        mostrarMensaje("Devolución realizada.");
 
         librosDisponibles = actualizarLibros(librosDisponibles, -15);
 
-        System.out.println("Libros finales: " + librosDisponibles);
+        mostrarMensaje("Libros finales: " + librosDisponibles);  
     }
 
     public static int actualizarLibros(int librosActuales, int cantidad) {
